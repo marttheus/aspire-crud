@@ -1,12 +1,27 @@
 
-  ___   ___________ ___________ _____ 
- / _ \ /  ___| ___ \_   _| ___ \  ___|
-/ /_\ \\ `--.| |_/ / | | | |_/ / |__  
-|  _  | `--. \  __/  | | |    /|  __| 
-| | | |/\__/ / |    _| |_| |\ \| |___ 
-\_| |_/\____/\_|    \___/\_| \_\____/ 
-                                      
-                                      
+░█████╗░░██████╗██████╗░██╗██████╗░███████╗
+██╔══██╗██╔════╝██╔══██╗██║██╔══██╗██╔════╝
+███████║╚█████╗░██████╔╝██║██████╔╝█████╗░░
+██╔══██║░╚═══██╗██╔═══╝░██║██╔══██╗██╔══╝░░
+██║░░██║██████╔╝██║░░░░░██║██║░░██║███████╗
+╚═╝░░╚═╝╚═════╝░╚═╝░░░░░╚═╝╚═╝░░╚═╝╚══════╝
+
+## Table of Contents
+
+- [Features](#features)
+- [Getting Started](#getting-started)
+- [Usage](#usage)
+- [Contributing](#contributing)
+- [License](#license)
+
+## Features
+
+- **Create:** Add new items to the database.
+- **Read:** Retrieve and display information from the database.
+- **Search:** Retrieve and display paginated information from the database.
+- **Update:** Modify existing records in the database.
+- **Delete:** Remove items from the database.
+
 ## Getting Started
 
 ### Prerequisites
@@ -17,6 +32,7 @@
     dotnet workload update
     dotnet worload install aspire
     ```
+- DB TO BE DECIDED
 
 ### Installation
 
@@ -32,19 +48,42 @@
     cd aspire-crud
     ```
 
-3. Build and run the application:
+3. Restore dependencies:
+    ```console
+    dotnet restore
+    ```
+
+### Configuration
+
+1. Open the appsettings.json file and update the database connection string.
+    ```json
+    {
+      "ConnectionStrings": {
+        "DefaultConnection": "YOUR_DATABASE_CONNECTION_STRING"
+      }
+    }
+    ```
+
+2. Apply database migrations:
+    ```console
+    dotnet ef database update
+    ```
+
+## Usage
+
+1. Build and run the application:
 
     ```console
     dotnet build
     dotnet run
     ```
 
-4. Open your web browser and visit `http://localhost:5000` to see the application in action.
+2. Access the API at http://localhost:5000 or https://localhost:5001 in your preferred API testing tool (e.g., Postman).
 
-## Features
+3. Use the API to perform CRUD operations on entities.
 
-- **Create:** Add new items to the database.
-- **Read:** Retrieve and display information from the database.
-- **Search:** Retrieve and display informations from the database.
-- **Update:** Modify existing records in the database.
-- **Delete:** Remove items from the database.
+## Contributing
+Contributions are welcome! If you find any issues or have suggestions for improvements, please open an issue or submit a pull request.
+
+## License
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
