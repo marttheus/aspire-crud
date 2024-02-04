@@ -32,7 +32,7 @@
     dotnet workload update
     dotnet worload install aspire
     ```
-- DB TO BE DECIDED
+- PostgreSQL
 
 ### Installation
 
